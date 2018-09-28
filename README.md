@@ -1,4 +1,6 @@
-# Installing to the pyenv 'tools3'
+# Pretty print as JSON the contents of the clipboard
+
+### Installing to the pyenv 'tools3'
 
 **Installation**
 
