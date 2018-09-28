@@ -15,3 +15,8 @@
 2. `pip uninstall ppj`
 3. `pyenv deactivate`
 
+**Usage**
+ppj [-h]
+
+Copy logs to the clipboard and type 'ppj' at the command line
+Or pipe output to 'ppj'

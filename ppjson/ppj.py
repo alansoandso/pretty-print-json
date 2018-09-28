@@ -25,7 +25,7 @@ def get_clipboard():
 
 def main():
     if len(sys.argv) == 2 and sys.argv[1].endswith(('--help', '-h')):
-        print('Usage: {} [-h]\nJSON Tool - Pretty print the JSON stored in the clipboard'.format(os.path.basename(sys.argv[0])))
+        print('Usage: {} [-h]\nPretty print as JSON the contents of the clipboard or pipe'.format(os.path.basename(sys.argv[0])))
     else:
         # Retrieve contents of the clipboard
         show_json(get_clipboard())
