@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import json
 from pprint import pformat
 import os
@@ -43,10 +44,10 @@ def show_json(lines):
 
     # Try to display some JSON
     try:
-        output = pformat(json.loads(lines)).replace("u'", '"').replace("'", '"')
+        output = pformat(json.loads(lines)).replace("'", '"')
     except ValueError:
         # Instead split over multiple lines
-        output = ''.join(['Not valid JSON\n', lines.replace(', ', ',\n').replace('","', '",\n"')])
+        output = ''.join(['Not valid JSON\n', lines.replace(',', ',\n')])
 
     return set_clipboard(output)
 

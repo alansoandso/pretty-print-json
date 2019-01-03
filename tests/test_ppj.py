@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import unittest
 from ppjson.ppj import show_json
 
@@ -48,6 +49,15 @@ class TestPPJ(unittest.TestCase):
     def test_not_valid_json(self):
         raw_data = '('
         self.assertRegex(show_json(raw_data), 'Not valid JSON')
+
+    def test_not_valid_json_multiline(self):
+        raw_data = 'one, two'
+        expected = (
+            'Not valid JSON\n'
+            'one,\n'
+            ' two'
+        )
+        self.assertMultiLineEqual(show_json(raw_data), expected)
 
     def test_over_escaped_quotes(self):
         raw_data = '{\"customer \\\\\\\"quote\\\\\\\"  \": {\"partyId\": \"11111111111111111112351\", "amount":"£99.99"}}'
