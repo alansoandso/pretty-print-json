@@ -9,6 +9,6 @@ setup(
     author='Alan So',
     author_email='alansoandso@gmail.com',
     packages=['ppjson'],
-    scripts=['scripts/ppj'],
+    entry_points={'console_scripts': ['ppj = ppjson.ppj:main', ]},
     install_requires=install_requires
 )

@@ -4,19 +4,32 @@
 
 **Installation**
 
-1. `pyenv activate tools3`
-2. `pip install .`
-3. `pyenv deactivate`
+`pip install .`
 
 
 **Uninstalling**
 
-1. `pyenv activate tools3`
-2. `pip uninstall ppj`
-3. `pyenv deactivate`
+`pip uninstall ppj`
 
 **Usage**
 ppj [-h]
 
 Copy logs to the clipboard and type 'ppj' at the command line
 Or pipe output to 'ppj'
+
+**Development**
+
+```
+pyenv local tools3
+pip install -e .
+py.test -vs
+```
+
+**Testing**
+```
+cd tests
+py.test -v
+
+py.test --cov-report html --cov ppjson.ppj
+open htmlcov/index.html
+```
