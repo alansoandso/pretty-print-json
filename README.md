@@ -27,7 +27,6 @@ py.test -vs
 
 **Testing**
 ```
-cd tests
 py.test -v
 
 py.test --cov-report html --cov ppjson.ppj
